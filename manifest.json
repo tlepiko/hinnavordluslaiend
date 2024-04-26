@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
-    "name": "Tiitli kuvamise laiend",
-    "version": "1.0",
-    "description": "Kuvab laiendis esimese <title> elemendi sisu.",
+    "name": "Hinnavõrdluse laiend",
+    "version": "1.1",
+    "description": "Kuvab laiendis toote vöötkoodi numbri.",
     "permissions": ["activeTab", "scripting"],
     "action": {
       "default_popup": "popup.html",
