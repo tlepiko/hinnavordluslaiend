@@ -12,17 +12,23 @@ chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
                         const price = parseFloat(offer.price);
                         if (price == data1.data[0].price) {
                           dealerName = offer.dealer.name;
+                          rating = offer.dealer.rating;
+                          console.log(rating);
                       }
                   });
                       const price = data1.data[0].price;
                       const shopName = dealerName;
+                      const shopRating = rating;
                       const priceElement = document.createElement('div');
-                      priceElement.textContent = `Hind: ${price}`;
+                      priceElement.textContent = `Hind: ${price} €`;
                       const shopElement = document.createElement('div');
                       shopElement.textContent = `Müüja: ${shopName}`;
+                      const ratingElement = document.createElement('div');
+                      ratingElement.textContent = `Müüja hinnang: ${shopRating}/5`;
                       const contentDiv = document.getElementById('andmed');
                       contentDiv.appendChild(priceElement);
                       contentDiv.appendChild(shopElement);
+                      contentDiv.appendChild(ratingElement);
                   })
                   .catch(error => {
                     console.error('Fetch error:', error);
