@@ -88,7 +88,7 @@ chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
               });
   
       } else {
-        document.getElementById("gtin").textContent = "Toodet ei leitud!";
+        document.getElementById("gtin").textContent = "Tootekood puudub!";
       }
     });
   });
