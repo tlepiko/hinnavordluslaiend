@@ -12,7 +12,7 @@ chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
             window.open(searchLink, '_blank');
         }
         const productCode = document.createElement(`p`);
-        productCode.textContent = `Toodekood: ` + response.gtin;
+        productCode.textContent = `Tootekood: ` + response.gtin;
         const notFound = document.createElement('strong');
         notFound.textContent = `Toodet ei leitud!`
           fetch(`https://api.hinnavaatlus.ee/search/?query=${response.gtin}`)
